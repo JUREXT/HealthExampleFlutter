@@ -12,8 +12,6 @@ A very simple health app based on [this beautiful design](https://dribbble.com/s
 4. Hopefully, all Dart dependencies will automatically be fetched by your IDE. If not, do a [manual pub get](https://dart.dev/tools/pub/cmd/pub-get).
 5. Use the commit history as your step-by-step guide to implementing the above design in your own Flutter app. Read it in chronological order, starting from the oldest (ignore the initial commit, of course).
 
-📬 If stuck, you may drop me an email at [ab@anuragbhandari.com](mailto:ab@anuragbhandari.com).
-
 ## Goals
 
 This is how your app should look like after you've followed all steps:
