@@ -13,108 +13,112 @@ class HomeScreen extends StatelessWidget {
         child: SafeArea(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 20.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
+            child: ListView(
+              children: [
                 Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text(
-                      'For today',
-                      style: TextStyle(
-                        fontSize: 40.0,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                    Text(
-                      DateFormat.yMMMMd('en_US').format(DateTime.now()),
-                      style: TextStyle(
-                        fontSize: 17.0,
-                      ),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 40.0,
-                ),
-                Row(
-                  children: <Widget>[
-                    Expanded(
-                      child: GestureDetector(
-                        onTap: () {
-                          Navigator.pushNamed(context, 'hydration');
-                        },
-                        child: Tile(
-                          backgroundColor: kSwatchBlueColor,
-                          borderColor: kSwatchBlueColor,
-                          textColor: Colors.white,
-                          icon: Icons.opacity,
-                          title: '4',
-                          subtitle: 'cups',
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text(
+                          'For today',
+                          style: TextStyle(
+                            fontSize: 40.0,
+                            fontWeight: FontWeight.w500,
+                          ),
                         ),
-                      ),
+                        Text(
+                          DateFormat.yMMMMd('en_US').format(DateTime.now()),
+                          style: TextStyle(
+                            fontSize: 17.0,
+                          ),
+                        ),
+                      ],
                     ),
                     SizedBox(
-                      width: 20.0,
+                      height: 40.0,
                     ),
-                    Expanded(
-                      flex: 2,
-                      child: Tile(
-                        backgroundColor: kTileDefaultBackgroundColor,
-                        borderColor: kTileDefaultBorderColor,
-                        textColor: kTileDefaultTextColor,
-                        title: '12345',
-                        subtitle: 'steps',
-                      ),
+                    Row(
+                      children: <Widget>[
+                        Expanded(
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.pushNamed(context, 'hydration');
+                            },
+                            child: Tile(
+                              backgroundColor: kSwatchBlueColor,
+                              borderColor: kSwatchBlueColor,
+                              textColor: Colors.white,
+                              icon: Icons.opacity,
+                              title: '4',
+                              subtitle: 'cups',
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 20.0,
+                        ),
+                        Expanded(
+                          flex: 2,
+                          child: Tile(
+                            backgroundColor: kTileDefaultBackgroundColor,
+                            borderColor: kTileDefaultBorderColor,
+                            textColor: kTileDefaultTextColor,
+                            title: '12345',
+                            subtitle: 'steps',
+                          ),
+                        ),
+                      ],
                     ),
-                  ],
-                ),
-                SizedBox(
-                  height: 20.0,
-                ),
-                Row(
-                  children: <Widget>[
-                    Expanded(
-                      child: Tile(
-                        backgroundColor: kTileDefaultBackgroundColor,
-                        borderColor: kTileDefaultBorderColor,
-                        textColor: kTileDefaultTextColor,
-                        title: '2878',
-                        subtitle: 'kcal',
-                      ),
+                    SizedBox(
+                      height: 20.0,
+                    ),
+                    Row(
+                      children: <Widget>[
+                        Expanded(
+                          child: Tile(
+                            backgroundColor: kTileDefaultBackgroundColor,
+                            borderColor: kTileDefaultBorderColor,
+                            textColor: kTileDefaultTextColor,
+                            title: '2878',
+                            subtitle: 'kcal',
+                          ),
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                      height: 20.0,
+                    ),
+                    Row(
+                      children: <Widget>[
+                        Expanded(
+                          child: Tile(
+                            backgroundColor: kTileDefaultBackgroundColor,
+                            borderColor: kTileDefaultBorderColor,
+                            textColor: kTileDefaultTextColor,
+                            title: '24',
+                            subtitle: 'min',
+                          ),
+                        ),
+                        SizedBox(
+                          width: 20.0,
+                        ),
+                        Expanded(
+                          child: Tile(
+                            backgroundColor: kSwatchPinkColor,
+                            borderColor: kSwatchPinkColor,
+                            textColor: Colors.white,
+                            icon: Icons.favorite,
+                            title: '118',
+                            subtitle: 'bpm',
+                          ),
+                        ),
+                      ],
                     )
                   ],
                 ),
-                SizedBox(
-                  height: 20.0,
-                ),
-                Row(
-                  children: <Widget>[
-                    Expanded(
-                      child: Tile(
-                        backgroundColor: kTileDefaultBackgroundColor,
-                        borderColor: kTileDefaultBorderColor,
-                        textColor: kTileDefaultTextColor,
-                        title: '24',
-                        subtitle: 'min',
-                      ),
-                    ),
-                    SizedBox(
-                      width: 20.0,
-                    ),
-                    Expanded(
-                      child: Tile(
-                        backgroundColor: kSwatchPinkColor,
-                        borderColor: kSwatchPinkColor,
-                        textColor: Colors.white,
-                        icon: Icons.favorite,
-                        title: '118',
-                        subtitle: 'bpm',
-                      ),
-                    ),
-                  ],
-                )
               ],
             ),
           ),
